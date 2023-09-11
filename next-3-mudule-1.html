@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMMING LANGUAGE USING CPP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,200;0,8..
+    144,300;0,8..144,400;1,8..144,300;1,8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+          <a href=""><img src="images/LOGO_2-removebg-preview.png"></a>
+            <div class="nav-links" id="navLinks">
+                <img onclick="hideMenu()" class="menu-icon" src="images/close-icon.png">
+                
+            <ul>
+                <input type="text" placeholder="Search">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="category.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+        <img onclick="showMenu()" class="menu-icon" src="images/menu-icon-white.png">
+        </nav>
+        <h1>Module 1</h1>
+    </section>
+
+        <section class="mudule-1">
+         <div class="lessons">
+            <h1>Operators in C++ program</h1>
+            <h4>In C++, operators are symbols or special keywords used to perform operations on variables 
+                or values. C++ provides a wide range of operators that can be categorized into several groups 
+                based on their functionality. Here are some of the most commonly used operators in C++:</h4>
+            <p>
+               <strong>1.    Arithmetic Operators:</strong>
+               <br> <br>
+
+                 i.   + (Addition)
+                 <br> <br>
+                 ii.   - (Subtraction)
+                 <br> <br>
+                 iii.   * (Multiplication)
+                 <br> <br>
+                 iv.   / (Division)
+                 <br> <br>
+                 v.   % (Modulus)
+            <br> <br>
+            
+           <strong>2.     Assignment Operators:</strong>
+           <br> <br>
+        i.   = (Assignment)
+        <br> <br>
+        ii.   += (Addition assignment)
+        <br> <br>
+        iii.   -= (Subtraction assignment)
+        <br> <br>
+        iv.   *= (Multiplication assignment)
+        <br> <br>
+        v.   /= (Division assignment)
+        <br> <br>
+        vi   %= (Modulus assignment)
+               <br> <br>
+           
+           <strong>3.   Comparison Operators:</strong>
+           <br> <br>
+        i.   == (Equal to)
+        <br> <br>
+        ii.   != (Not equal to)
+        <br> <br>
+         iii.  < (Less than)
+         <br> <br>
+         iv.  > (Greater than)
+         <br> <br>
+         v.  <= (Less than or equal to)
+         <br> <br>
+        vi.   >= (Greater than or equal to)
+        <br> <br>
+         
+    <strong> 4.   Logical Operators:</strong>
+        <br> <br>
+
+        i.   && (Logical AND)
+        <br> <br>
+        ii.   || (Logical OR)
+        <br> <br>
+        iii.   ! (Logical NOT)
+        <br> <br>
+       <strong> 5.   Bitwise Operators:</strong>
+        <br> <br>
+           
+        i.   & (Bitwise AND)
+        <br> <br>
+        ii.   | (Bitwise OR)
+        <br> <br>
+        iii.   ^ (Bitwise XOR)
+        <br> <br>
+        iv.   ~ (Bitwise NOT)
+        <br> <br>
+        v.   << (Left shift)
+        <br> <br>
+        vi.   >> (Right shift)
+        <br> <br>
+
+       <strong> 6.   Increment and Decrement Operators:</strong>
+        <br> <br>
+        i.   ++ (Increment)
+        <br> <br>
+        ii.   -- (Decrement)
+        <br> <br>
+         
+        <strong>7.  Conditional (Ternary) Operator:</strong>
+        <br> <br> 
+         i.  ? : (Conditional expression)
+           <br> <br>
+         <strong>8.  Member Access Operators:</strong>
+           <br> <br>
+           
+         i.  . (Dot operator) - Access member variables or functions of an object
+         <br> <br>
+         ii.  -> (Arrow operator) - Access member variables or functions through a pointer to an object
+         <br> <br>
+        <strong> 9.   Address and Indirection Operators:</strong>
+         <br> <br>
+           
+        i.   & (Address-of operator) - Get the address of a variable
+        <br> <br>
+         ii.  * (Dereference operator) - Access the value pointed to by a pointer
+         <br> <br>
+           
+         <strong>10. Sizeof Operator:</strong>
+         <br> <br>
+           
+           sizeof - Returns the size (in bytes) of a data type or object
+           <br> <br>
+          
+        <strong>11.   Comma Operator:</strong>
+        <br> <br>
+           
+        i.   , (Comma operator) - Evaluates multiple expressions and returns the result of the last one
+        <br> <br>
+         
+       <strong> 12.     Conditional Operator (Ternary Operator):</strong>
+        <br> <br>
+           
+         i.   ? : (Conditional operator) - A shorthand way to write an if-else statement
+         <br> <br>
+           
+        <strong> 13.    Type Cast Operators:</strong>
+         <br> <br>
+           
+         i.   static_cast
+         <br> <br>
+         ii.   dynamic_cast
+         <br> <br>
+         iii.  const_cast
+         <br> <br>
+         iv.  reinterpret_cast
+         <br> <br>
+         
+        <strong> 14.    Other Operators:</strong>
+         <br> <br>
+           
+        i.    sizeof - Returns the size (in bytes) of a data type or object
+        <br> <br>
+        ii.   typeid - Returns information about an expression's type at runtime
+        <br> <br>
+           
+        
+        These are the basic operators in C++, and they can be combined and used in various ways to perform 
+        different operations on variables and values in your C++ programs.
+           
+           
+           
+           
+            
+           <br> <br>
+           
+      </p>
+
+      <div class="image-example">
+        <h2>Example of C++ program</h2>
+        <img src="images/C++_Basics_Example1.png">
+
+      </div>
+
+      <div class="input">
+        <h4>Cin in C++</h4>
+        <p>cin is an important input stream object in C++ that is used for reading input from the standard 
+            input, typically the keyboard. It is part of the C++ Standard Library and is used with the >>
+             operator to extract data from the input stream.
+            <br> <br> 
+            Here's how you can use cin to read various types of data in C++:</p>
+            <br> <br>
+            <h5>Syntax of Cin</h5>
+            <img src="images/cin syntax.PNG">
+            <h5>Example of Cin</h5>
+            <img src="images/cin example.PNG">
+            <br> <br>
+            <h2>C++ program to calculate area of a circle</h2>
+            <img src="images/area of circle.PNG">
+      </div>
+            
+      <div class="next-previou-btn">
+        <button><a href="next-2-mudule-1.html">Previous</a></button>
+        <button><a href="review-module-1.html">Next</a></button>
+
+         </div>
+         </div>
+        </section>
+   
+    <script>
+
+var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+         navLinks.style.right = "0";
+      }
+      function hideMenu(){
+         navLinks.style.right = "-200px";
+      }
+
+
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwQQX0G5sI_Vll3O9QTdtw_fxTgZUsFq2M6iVpBE4_BCxoKcu1b3p7ojBOHBZUObTmA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+         msg.innerHTML = "Your Order has been submitted successfully!"
+         setTimeout(function(){
+            msg.innerHTML = ""  
+         },6000)
+         form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+     
+    </script>
+
+</body>
+</html>

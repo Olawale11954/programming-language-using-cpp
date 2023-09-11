@@ -1,0 +1,615 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', serif;
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(15, 15, 15, 0.2),rgba(22, 22, 24, 0.7)), url(images/supercalculateur.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav img{
+    width: 100px;
+}
+nav{
+    display:flex;
+    padding:2%, 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    justify-content: space-between;
+    padding: 10px 14px;
+}
+.nav-links ul li a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e61c0e;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    }
+    .nav-links input{
+        position: relative;
+        margin-left: 80px;
+        padding: 10px 10px;
+        border: 1px solid #e61c0e;
+        outline: 0;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    
+    .menu-icon{
+        width: 30px;
+    }
+    .home-page{
+        width: 90%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    .home-page h1{
+        font-size: 50px;
+    }
+    .home-page p{
+        font-size: 18px;
+    }
+    .home-page button{
+        outline: 0;
+        border: 0;
+        background: #fff;
+        color: #222;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px 10px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .home-page button:hover{
+        background-color: #e61c0e;
+        color: #fff;
+    }
+    nav .menu-icon{
+        display: none;
+    }
+
+    @media(max-width: 490px){
+        .home-page h1{
+            font-size: 20px; 
+         }
+         .nav-links ul li{
+             display: block;
+         }
+         .nav-links input{
+            display: none;
+         }
+         .nav-links{
+             position: fixed;
+             background: #020b36;
+             height: 100vh;
+             width: 200px;
+             top: 0;
+             right: -200px;
+             text-align: left;
+             z-index: 2;
+             transition: 1s;
+     }
+         nav .menu-icon{
+             display: block;
+             color: #fff;
+             margin: 10px;
+             font-size: 22px;
+             cursor: pointer;
+         }
+         .nav-links ul{
+             padding: 30px;
+         }
+         .nav-links ul li:hover::after{
+            width: 0%;
+            }
+     }
+
+     .courses{
+        width: 90%;
+        margin: 40px;
+        padding: 10px 10px;
+
+     }
+     
+     .modules{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+     }
+     .modules-col{
+        background: #f4f4f4;
+        color: #222;
+        border-radius: 10px;
+        padding: 10px 10px;
+        margin-left: 20px;
+     }
+     .modules-col h1{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+        color: #333;
+        
+     }
+     .modules-col h3{
+        font-size: 1rem;
+     }
+     .modules-col button{
+        border: 0;
+        outline: 0;
+        padding: 10px 10px;
+        border-radius: 10px;
+        background-color: #e61c0e;
+        margin-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.5s;
+     }
+     .modules-col button:hover{
+        background: #020b36;
+        color: #fff;
+     }
+     .modules-col button a{
+        text-decoration: none;
+        font-size: 24px;
+        color: white;
+     }
+     .modules-col p{
+        text-justify: auto;
+        font-size: 18px;
+        color: #222;
+        
+     }
+     @media(max-width: 490px){
+        .courses{
+            width: 80%;
+            margin: 30px;
+            padding: 10px 10px;
+    
+         }
+        .modules{
+            grid-template-columns: 1fr;
+        }
+       .modules-col h1{
+        font-size: 25px;
+       }
+       .modules-col button a{
+        font-size: 18px;
+       }
+     }
+
+
+  
+    
+    .sub-header{
+        height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(rgb(4,9,30,0.7),rgb(4,9,30,0.7)), url(images/Cpp-Programmin.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff; 
+    }
+    h1{
+        font-size: 50px;
+    }
+   
+    /*----Call to action----*/
+
+    .cta{
+        margin: 100px auto;
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/Cpp-Programmin.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        text-align: center;
+        padding: 100px 0;
+    }
+    .cta h1{
+      color: #fff;
+      margin-bottom: 40px;
+      padding: 0;  
+    }
+    .cta a{
+        text-decoration: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .hero-btn{
+        background-color: #e61c0e;
+        border: 0;
+        outline: o;
+        border-radius: 10px;
+        color: #fff;
+        padding: 10px 10pxs;
+    }
+    @media(max-width: 490px){
+        .cta h1{
+            font-size: 24px;
+        }
+    }
+
+    /*------Contact us page-------*/
+
+    .row{
+        background-color: aqua;
+        color: #222;
+        margin: auto;
+        margin-left: 10px;
+    }
+
+    .contact-col{
+        width: 100%;
+        height: 100vh;
+        background-color: #141a34;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-col form{
+        width: 100%;
+        max-width: 500px;
+        padding: 50px 30px 20px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+    }
+    .input-group{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        position: relative;
+    }
+    .input-group label{
+        flex-basis: 28%;
+    }
+    .input-group input, .input-group textarea{
+        flex-basis: 68%;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #999;
+        color: #333;
+        font-size: 16px;
+    }
+    ::placeholder{
+        font-size: 14px;
+    }
+    form button{
+        background: #141a34;
+        color: #fff;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 0.7);
+        padding: 10px 40px;
+        outline: none;
+        cursor: pointer;
+        display: block;
+        margin: 30px auto 10px;
+    }
+    .input-group span{
+        position: absolute;
+        bottom: 12px;
+        right: 17px;
+        font-size: 14px;
+        color: red;
+    }
+    #submit-error{
+        color: red;
+    }
+    .input-group span i{
+        color: seagreen;
+    }
+    @media(max-width: 490px){
+        .input-group label{
+            flex-basis: 30%;
+            font-size: 12px;
+        }
+        .input-group input{
+            flex-basis: 48%;
+        }
+    }
+    .state-options{
+        flex-basis: 68%;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #999;
+        color: #333;
+        font-size: 16px;
+    }
+
+     /*------Footer-------*/
+
+     .site-footer{
+        background-color: #f4f4f4;
+        padding: 20px 0;
+     }
+     .site-footer h2{
+        text-align: center;
+        font-size: 30px;
+        color: #333;
+        font-weight: 500;
+     }
+     .site-footer p{
+        margin: 0 auto;
+        margin-left: 10px;
+        padding: 10px 10px;
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        text-align: justify;
+        text-justify: auto;
+
+     }
+     .footer-content{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20pxs;
+     }
+     .logo img{
+        max-width: 150px;
+     }
+     .contact-info{
+        text-align: center;
+     }
+     .contact-info a{
+        color: #333;
+        text-decoration: none;
+     }
+     .social-media{
+        display: flex;
+        margin-left: 80px;
+     }
+     .social-icon{
+        margin-right: 10px;
+        margin-top: 20px;
+     }
+     .social-icon img{
+        width: 40px;
+        height: 40px;
+        padding: 25px;
+     }
+     .copy-right p{
+        text-align: center;
+        font-style: bold;
+        font-size: 20px;
+        margin-top: 20px;
+     }
+     @media(max-width: 490px){
+        .site-footer p{
+            font-size: 0.9rem;
+        }
+        .footer-content{
+            max-width: 400px;
+        }
+        .social-icon img{
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+        }
+        
+     }
+#submit-error{
+    color: #e61c0e;
+    font-size: 14px;
+    display: none;
+}
+#msg{
+    color: rgb(3, 138, 75);
+    font-size: 14px;
+}
+
+/*-------Module one page-----*/
+
+.lessons{
+    background: #f4f4f4;
+    margin: auto;
+    padding: 10px 10px;
+
+}
+.lessons h1{
+    font-size: 45px;
+    font-weight: bold;
+    color: #222;
+}
+.lessons h4{
+    font-size: 30px;
+    color: #f44336;
+    font-weight: bold;
+}
+.lessons p{
+    font-size: 1.5rem;
+    text-align: justify;
+    text-justify: auto;
+}
+.lessons p span{
+    color: #e61c0e;
+    font-size: 1.3rem;
+    text-align: left;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+.next-previou-btn{
+    display: flex;
+    margin-left: 500px;
+   
+}
+.next-previou-btn button{
+        border: 0;
+        outline: 0;
+        padding: 10px 10px;
+        border-radius: 10px;
+        background-color: #e61c0e;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        color: #fff;
+        text-align: center;
+        cursor: pointer; 
+        transition: all 0.5s;
+}
+.next-previou-btn button:hover{
+    background: #020b36;
+}
+.next-previou-btn button a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 1.3rem;
+}
+.code-example{
+    margin-top: 40px;
+}
+.code-example h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.code-example img{
+    margin-bottom: 30px;
+}
+
+@media(max-width: 490px){
+    .lessons h1{
+        font-size: 25px;
+        
+    }
+    .lessons h4{
+        font-size: 20px;
+    }
+    .lessons p{
+        font-size: 1.2rem;
+    }
+    .code-example img{
+        width: 350px;
+        height: 200px;
+    }
+    .next-previou-btn{
+        margin-left: 10px;
+    }
+    .rule-image{
+        width: 300px;
+        height: 80px;
+    }
+}
+.module1-review{
+    text-align: center;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #020b36;
+    color: #fff;
+    margin: 50px auto 100px;
+  
+}
+.module1-review h3{
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #e61c0e;
+}
+.module1-review p{
+    margin-top: 10px;
+    font-size: 14px;
+
+}
+.module1-review button{
+    border: 0;
+        outline: 0;
+        padding: 10px 10px;
+        border-radius: 10px;
+        background-color: #e61c0e;
+        color: #fff;
+        text-align: center;
+        cursor: pointer; 
+        transition: all 0.5s;
+
+}
+
+.module1-review button:hover{
+    background: #024222;
+}
+.module1-review button a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+
+@media(max-width: 490px){
+    .module1-review{
+        width: 80%;
+        
+    }
+    .module1-review h3{
+        margin-top: 30px;
+        margin-bottom: 20pxs;
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 2px solid #e61c0e;
+    }
+    .module1-review p{
+        margin-top: 30px;
+        font-size: 12px;
+    }
+    .image-example img{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 30px;
+    }   
+    .if-image img{
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    .input img{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 30px;  
+    }
+    .for-loop img{
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    
+    
+    
+}
+.input h5{
+    font-size: 24px;
+    color: #e61c0e;
+}

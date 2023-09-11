@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMMING LANGUAGE USING CPP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,200;0,8..
+    144,300;0,8..144,400;1,8..144,300;1,8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href=""><img src="images/LOGO_2-removebg-preview.png"></a>
+            <div class="nav-links" id="navLinks">
+                <img onclick="hideMenu()" class="menu-icon" src="images/close-icon.png">
+                
+            <ul>
+                <input type="text" placeholder="Search">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="user.html">Student Info</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+        <img onclick="showMenu()" class="menu-icon" src="images/menu-icon-white.png">
+        </nav>
+        <h1>Module 1</h1>
+    </section>
+
+        <section class="mudule-1">
+            <div class="module1-review">
+                <h3>CONGRATULATION! YOU HAVE COMPLETED MODULE 2</h3>
+                <P>Click the button below to take quiz</P>
+      
+                <button><a href="quiz-2.html">Take Quiz</a></button>
+                
+            </div>
+            
+        </section>
+   
+    <script>
+
+var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+         navLinks.style.right = "0";
+      }
+      function hideMenu(){
+         navLinks.style.right = "-200px";
+      }
+
+
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwQQX0G5sI_Vll3O9QTdtw_fxTgZUsFq2M6iVpBE4_BCxoKcu1b3p7ojBOHBZUObTmA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+         msg.innerHTML = "Your Order has been submitted successfully!"
+         setTimeout(function(){
+            msg.innerHTML = ""  
+         },6000)
+         form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+     
+    </script>
+
+</body>
+</html>

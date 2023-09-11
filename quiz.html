@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@100;200;300;400;600;700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/307172a5f5.js" crossorigin="anonymous"></script>
+
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background: #001e4d;
+}
+
+.app{
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+	.app h1{
+	    font-size: 45px;
+	    color: #001e4d;
+	    font-weight: 600;
+	    border-bottom: 4px solid #333;
+	    padding-bottom: 7px;
+	}
+    br{
+        font-size: 20px;
+        color: #000;
+    }
+	.quiz{
+	    padding: 10px 0;
+	}
+	.quiz h2{
+	    font-size: 18px;
+	    color: #001e4d;
+	    font-weight: 600;
+	}
+	.btn{
+	    background: #fff;
+	    color: #222;
+	    font-size: 18px;
+	    font-weight: 500;
+	    width: 100%;
+	    border: 2px solid #222;
+	    padding: 10px;
+	    margin: 10px 0;
+	    text-align: left;
+	    border-radius: 40px;
+	    cursor: pointer;
+	    transition: all 0.3s;
+	}
+	.btn:hover:not([disabled]){
+	    background: #222;
+	    color: #fff;
+	}
+	.btn:disabled{
+	    cursor: no-drop;
+	}
+	#next-btn{
+	    background: #001e4d;
+	    color: #fff;
+	    font-weight: 500;
+	    font-size: 24px;
+	    width: 150px;
+	    border: 0;
+	    padding: 10px;
+	    margin: 20px auto 0;
+	    border-radius: 10px;
+	    cursor: pointer;
+	    display: none;
+	}
+    #next-stage{
+	    background: #e20a0a;
+	    color: #fff;
+	    font-weight: 500;
+	    font-size: 24px;
+	    width: 250px;
+	    border: 0;
+	    padding: 10px;
+	    margin: 20px auto 0;
+	    border-radius: 10px;
+	    cursor: pointer;
+	    display: none;
+	}
+    a{
+        text-decoration: none;
+        text-align: center;
+    }
+	.correct{
+	    background: #9aeabc;
+	}
+	.incorrect{
+	    background: #ff9393;
+	}
+    @media(max-width: 490px){
+        .app h1{
+            font-size: 30px;
+        }
+        .app{
+            max-width: 400px;
+        }
+    }
+
+
+</style>
+	</head>
+	
+	
+	<body>
+
+       
+	<div class="app">
+	<h1>Module 1 Quiz</br></h1>
+	<div class="quiz">
+	<h2 id="question">Question goes here</h2>
+	<div id="answer-buttons">
+	<button class="btn">Answer 1</button>
+	<button class="btn">Answer 2</button>
+	<button class="btn">Answer 3</button>
+	<button class="btn">Answer 4</button>
+	</div>
+	<button id="next-btn">Next</button>
+	<a href="module-2.html" id="next-stage">Continue</a>
+	</div>
+	
+	<script>
+
+var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+         navLinks.style.right = "0";
+      }
+      function hideMenu(){
+         navLinks.style.right = "-200px";
+      }
+	
+	const questions = [
+    {
+        question: "C++ programming language was extension of the C programming language. which year was it created?",
+        answers: [
+            { text: "1880s", correct: true},
+            { text: "1980s", correct: false},
+            { text: "1960s", correct: false},
+            { text: "2001", correct: false},
+        ]
+    },
+    {
+        question: "  What is the purpose of including the <iostream> header in a C++ program?",
+        answers: [
+            { text: " To enable input operations", correct: false},
+            { text: "To enable output operations", correct: true},
+            { text: "To define the main function", correct: false},
+            { text: "To include mathematical functions", correct: false},
+        ]
+    },
+    {
+        question: "C++ used many datatypes to declear a variable, the following are C++ data type except.",
+        answers: [
+           { text: "int", correct: false},
+            { text: "bool", correct: false},
+              { text: "const", correct: true},
+           { text: "string", correct: false},
+        ]
+    },
+    {
+        question: "C++ datatype are grouped in 3 group, which one is one of the datatype grouped?",
+        answers: [
+            { text: "Vector", correct: false},
+            { text: "Float", correct: false},
+            { text: "Modifiers", correct: false},
+            { text: "Char", correct: true},
+        ] 
+    },
+    {
+        question: "Comments are used to document a code. Which comment is this? /*     */",
+        answers: [
+            { text: "Single line comment", correct: false},
+            { text: "Multiple line comment", correct: true},
+            { text: "Basic line comment", correct: false},
+            { text: "In-line comments", correct: false},
+        ] 
+    },
+    {
+        question: "Which operator is used for printing output to the console in C++?",
+        answers: [
+            { text: "<<", correct: true},
+            { text: ">>", correct: false},
+            { text: "=", correct: false},
+            { text: "==", correct: false},
+        ] 
+    },
+    {
+        question: "What is the recommended way to initialize a C++ variable with a specific value?", 
+        answers: [
+            { text: "Use the const keyword", correct: false},
+            { text: "Declare the variable without initialization", correct: false},
+            { text: "Initialize the variable when declaring it", correct: true},
+            { text: "Use the void keyword", correct: false},
+        ] 
+    },
+    {
+        question: "operators are symbols or special keywords used to perform operations on variables. Which of the following is not part of the group of operators",
+        answers: [
+            { text: "Arithmetic", correct: false},
+            { text: "Comparison", correct: false},
+            { text: "Logical", correct: false},
+            { text: "Adittion", correct: true},
+        ] 
+    },
+    {
+        question: "+ and / are types of which operators?",
+        answers: [
+            { text: "Logical Operators", correct: false},
+            { text: "Comparison Operators", correct: false},
+            { text: "Arithmetic operators", correct: true},
+            { text: "Assignment Operators", correct: false},
+        ] 
+    },
+    {
+        question: "== and != are types of which operators?",
+        answers: [
+            { text: "Logical Operators", correct: false},
+            { text: "Comparison Operators", correct: true},
+            { text: "Comma operators", correct: false},
+            { text: "Assignment Operators", correct: false},
+        ]  
+    },
+  ];
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+const nextStage = document.getElementById("next-stage");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion(){
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    
+    
+
+    currentQuestion.answers.forEach(answer =>{
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+}
+
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
+    }else{
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(answerButtons.children).forEach(button =>{
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct")
+        }
+          button.disabled = true;
+        
+        });
+        nextButton.style.display = "block";
+}
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `Your scored = ${score / 10 * 100}%`;
+    if(score >= 8){
+        nextStage.innerHTML = "Congratulation, Click to Start Module 2";
+    nextStage.style.display = "block";
+    }
+    else{
+        nextButton.innerHTML = "Retake Quiz";
+    nextButton.style.display = "block";
+    }
+}
+
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+    
+});
+
+startQuiz();
+ 
+	
+	
+	</script>
+</body>
+</html>

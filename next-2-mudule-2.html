@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMMING LANGUAGE USING CPP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,200;0,8..
+    144,300;0,8..144,400;1,8..144,300;1,8..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href=""><img src="images/LOGO_2-removebg-preview.png"></a>
+            <div class="nav-links" id="navLinks">
+                <img onclick="hideMenu()" class="menu-icon" src="images/close-icon.png">
+                
+            <ul>
+                <input type="text" placeholder="Search">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="category.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+        <img onclick="showMenu()" class="menu-icon" src="images/menu-icon-white.png">
+        </nav>
+        <h1>Module 1</h1>
+    </section>
+
+        <section class="mudule-1">
+         <div class="lessons">
+            <h1>Break and Continue in C++</h1>
+            <h4>
+                In C++, break and continue are control flow statements used in loops to alter the flow of 
+                execution. They are commonly used in for, while, and do-while loops. Here's what each of them 
+                does:
+            </h4>
+               <p>
+                  <strong>Break Statement</strong>
+                  <br> <br>
+                  
+
+                The break statement is used to exit the current loop prematurely. When encountered, it terminates the loop immediately, even if the loop condition is still true.
+            It's typically used when you want to exit a loop early based on some condition.                     
+               </p>
+
+                <div class="for-loop">
+                <h3>Example of break Input</h3>
+                <br> <br>
+                <img src="images/break input.PNG">
+                
+                <br> 
+                <h3>Output</h3>
+                <br>
+                <img src="images/break output.PNG"
+                
+                </div>
+                <p>In the example above, the loop will print numbers from 1 to 4 and then exit when i becomes 5 due to the break statement.</p>
+
+               
+           
+               <p>
+                  <strong>Continue Statement</strong>
+                  <br> <br>
+                  
+
+               The continue statement is used to skip the rest of the current iteration and move to the next iteration of the loop. It does not terminate the loop.
+                It's often used when you want to skip a specific iteration of a loop based on some condition.
+
+                   
+               </p>
+
+                <div class="for-loop">
+                <h3>Example of Continue Input</h3>
+                <br> <br>
+                <img src="images/continue input.PNG">
+                
+                <br> 
+                <h3>Output</h3>
+                <br>
+                <img src="images/continue output.PNG"
+                
+                </div>
+                <p>In the example above, the loop will print numbers 1, 2, 4, and 5. It skips the iteration when i is 3 due to the continue statement.</p>
+
+                <p>
+                    Both break and continue statements can be used within for, while, and do-while loops to control the flow of the loop based on certain conditions. They provide flexibility in managing loop execution and allow you to handle specific cases within a loop structure.
+                </p>
+
+               
+           
+
+
+         <div class="next-previou-btn">
+            <button><a href="next-1-mudule-2.html">Previous</a></button>
+            <button><a href="review-module-2.html">Next</a></button>
+
+         </div>
+         </div>
+        </section>
+   
+    <script>
+
+var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+         navLinks.style.right = "0";
+      }
+      function hideMenu(){
+         navLinks.style.right = "-200px";
+      }
+
+
+     
+    </script>
+
+</body>
+</html>
